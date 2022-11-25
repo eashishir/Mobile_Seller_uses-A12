@@ -1,15 +1,48 @@
 import { data } from 'autoprefixer';
-import React from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const { createUser,googleProviderLogin ,updateUser} = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+   
 
-    const handleSignUp = data => {
-        console.log(data)
-    }
+    const handleSignUp = (data) => {
+        console.log(data);
+       
+        createUser(data.email , data.password)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+            const userInfo = {
+                displayName: data.name,
+                AccountType: data.account
+            }
+            updateUser(userInfo)
+            .then(() => {})
+            .catch(err => console.log(err))
+        })
+        .catch(error => {
+            console.log(error)
+           
+        });
+    };
+
+    const googleHandleSignIn = () =>{
+        googleProviderLogin(googleProvider)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+           
+        })
+        .catch(error => console.error(error))
+
+    };
     return (
         <div className='h-[800px] flex justify-center items-center '>
             <div className='w-97 p-7 bg-error rounded'>
@@ -55,20 +88,19 @@ const SignUp = () => {
                     <label className="label">
                         <span className="label-text">Select as a</span>
                     </label>
-                    <select {...register("category", { required: true })}
-                        className="form-control my-1 bg-info rounded">
-                        <option value="">User</option>
-                        <option value="A">Seller</option>
-
+                    <select {...register("account", { required: true })}>
+                       
+                        <option value="User">User</option>
+                        <option value="Seller">Seller</option>
                     </select>
-                    <input className='btn btn-accent w-full' value="SignUp" type="submit" />
+                    <input className='btn btn-accent w-full mt-4' value="SignUp" type="submit" />
                     <div>
                         {/* {loginError && <p className='text-red-600'>{loginError}</p>} */}
                     </div>
                 </form>
-                <p>New to Mobile!mela? <Link className='text-white font-bold' to='/signup'>Create new account</Link></p>
+                <p>Already have an account ? <Link className='text-white font-bold' to='/login'>Please Login</Link></p>
                 <div className="divider text-secondary font-bold">OR</div>
-                <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={googleHandleSignIn} className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );
