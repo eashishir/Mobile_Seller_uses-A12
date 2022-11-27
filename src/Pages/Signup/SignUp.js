@@ -1,4 +1,5 @@
 import { data } from 'autoprefixer';
+import toast from 'react-hot-toast';
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -9,16 +10,20 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { createUser,googleProviderLogin ,updateUser} = useContext(AuthContext);
+    const [signUpError, setSignUpError] = useState('')
     const googleProvider = new GoogleAuthProvider();
    
 
     const handleSignUp = (data) => {
         console.log(data);
+        setSignUpError('')
        
         createUser(data.email , data.password)
         .then(result => {
             const user = result.user;
             console.log(user)
+            toast('User Created Successfully')
+            
             const userInfo = {
                 displayName: data.name,
                 AccountType: data.account
@@ -29,6 +34,7 @@ const SignUp = () => {
         })
         .catch(error => {
             console.log(error)
+            setSignUpError(error.message)
            
         });
     };
@@ -95,7 +101,7 @@ const SignUp = () => {
                     </select>
                     <input className='btn btn-accent w-full mt-4' value="SignUp" type="submit" />
                     <div>
-                        {/* {loginError && <p className='text-red-600'>{loginError}</p>} */}
+                        {signUpError && <p className='text-red-600'>{signUpError}</p>}
                     </div>
                 </form>
                 <p>Already have an account ? <Link className='text-white font-bold' to='/login'>Please Login</Link></p>

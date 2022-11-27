@@ -1,118 +1,68 @@
 [
-    {
-      "_id": 1,
-      "name": "Teeth Orthodontics",
-      "slots": [
-        "08.00 AM - 08.30 AM",
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM",
-        "11.00 AM - 11.30 AM",
-        "11.30 AM - 12.00 AM",
-        "1.00 PM - 1.30 PM",
-        "1.30 PM - 2.00 PM",
-        "2.00 PM - 2.30 PM",
-        "2.30 PM - 3.00 PM",
-        "3.00 PM - 3.30 PM",
-        "3.30 PM - 4.00 PM",
-        "4.00 PM - 4.30 PM",
-        "4.30 PM - 5.00 PM"
-      ]
-    },
-    {
-      "_id": 2,
-      "name": "Cosmetic Dentistry",
-      "slots": [
-        "08.00 AM - 08.30 AM",
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM",
-        "11.00 AM - 11.30 AM",
-        "11.30 AM - 12.00 AM",
-        "1.00 PM - 1.30 PM",
-        "1.30 PM - 2.00 PM",
-        "2.00 PM - 2.30 PM",
-        "2.30 PM - 3.00 PM",
-        "3.00 PM - 3.30 PM",
-        "3.30 PM - 4.00 PM",
-        "4.00 PM - 4.30 PM",
-        "4.30 PM - 5.00 PM"
-      ]
-    },
-    {
-      "_id": 3,
-      "name": "Teeth Cleaning",
-      "slots": [
-        "08.00 AM - 08.30 AM",
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM",
-        "11.00 AM - 11.30 AM",
-        "11.30 AM - 12.00 AM",
-        "1.00 PM - 1.30 PM",
-        "1.30 PM - 2.00 PM",
-        "2.00 PM - 2.30 PM",
-        "2.30 PM - 3.00 PM",
-        "3.00 PM - 3.30 PM",
-        "3.30 PM - 4.00 PM",
-        "4.00 PM - 4.30 PM",
-        "4.30 PM - 5.00 PM"
-      ]
-    },
-    {
-      "_id": 4,
-      "name": "Cavity Protection",
-      "slots": [
-        "08.00 AM - 08.30 AM",
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM",
-        "11.00 AM - 11.30 AM",
-        "11.30 AM - 12.00 AM",
-        "1.00 PM - 1.30 PM",
-        "1.30 PM - 2.00 PM",
-        "2.00 PM - 2.30 PM",
-        "2.30 PM - 3.00 PM",
-        "3.00 PM - 3.30 PM",
-        "3.30 PM - 4.00 PM",
-        "4.00 PM - 4.30 PM",
-        "4.30 PM - 5.00 PM"
-      ]
-    },
-    {
-      "_id": 5,
-      "name": "Pediatric Dental",
-      "slots": [
-      ]
-    },
-    {
-      "_id": 6,
-      "name": "Oral Surgery",
-      "slots": [
-        "08.00 AM - 08.30 AM",
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM",
-        "11.00 AM - 11.30 AM",
-        "11.30 AM - 12.00 AM",
-        "1.00 PM - 1.30 PM",
-        "1.30 PM - 2.00 PM",
-        "2.00 PM - 2.30 PM",
-        "2.30 PM - 3.00 PM",
-        "3.00 PM - 3.30 PM",
-        "3.30 PM - 4.00 PM",
-        "4.00 PM - 4.30 PM",
-        "4.30 PM - 5.00 PM"
-      ]
-    }
-  ]
+  {
+    "categoryId": 1,
+    "productName": "Galaxy Tab ",
+    "orginalPrice": "20",
+    "reseelPrice": "15",
+    "use": "2 year",
+    "sellerName": "shishir",
+    "time": "22 Nov, 2022",
+    "location": "Dhaka",
+    "img": "https://images.samsung.com/is/image/samsung/p6pim/bd/sm-p615nzaabkd/gallery/bd-galaxy-tab-s6-lite-p615-sm-p615nzaabkd-thumb-456345659?$160_160_PNG$"
+  },
+  {
+    "categoryId": 1,
+    "productName": "Galaxy Note 20 ",
+    "orginalPrice": "30",
+    "reseelPrice": "20",
+    "use": "1 year",
+    "sellerName": "farabi",
+    "time": "20 Nov, 2022",
+    "location": "Dhaka",
+    "img": "https://images.samsung.com/is/image/samsung/p6pim/bd/feature/142466126/bd-feature-a-stunning-array-of-mystic-hues-that-redefine-work-and-play-470405501?$FB_TYPE_A_JPG$"
+  },
+  {
+    "categoryId": 2,
+    "productName": "Xiaomi Pad 5",
+    "orginalPrice": "15",
+    "reseelPrice": "10",
+    "use": "5 months",
+    "sellerName": "farabi",
+    "time": "23 Nov, 2022",
+    "location": "Dhaka",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-5.jpg"
+  },
+  {
+    "categoryId": 2,
+    "productName": "Xiaomi 12 Pro",
+    "orginalPrice": "90",
+    "reseelPrice": "45",
+    "use": "1 year",
+    "sellerName": "farabi",
+    "time": "20 Nov, 2022",
+    "location": "Dhaka",
+    "img": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Xiaomi-12-Pro.jpg"
+  },
+  {
+    "categoryId": 3,
+    "productName": "Apple iPad 10.2-Inch 9th Gen 64GB Wi-Fi Silver (MK2L3LL/A)",
+    "orginalPrice": "50",
+    "reseelPrice": "25",
+    "use": "1 year",
+    "sellerName": "farabi",
+    "time": "20 Nov, 2022",
+    "location": "Dhaka",
+    "img": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/apple/ipad-9th-gen/ipad-silver-wifi-500x500.webp"
+  },
+  {
+    "categoryId": 3,
+    "productName": "Apple iPhone 14 Pro Max",
+    "orginalPrice": "30",
+    "reseelPrice": "20",
+    "use": "1 year",
+    "sellerName": "farabi",
+    "time": "20 Nov, 2022",
+    "location": "Dhaka",
+    "img": "https://www.gsmarena.com.bd/images/products/Apple-iPhone-14-Pro-Max-Space-Black.jpg"
+  }
+]
