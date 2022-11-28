@@ -4,12 +4,12 @@ import logo from '../../../assets/Mobile.jpg'
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Navbar = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
         logOut()
-        .then(() => {})
-        .catch(error => console.log(error));
+            .then(() => { })
+            .catch(error => console.log(error));
     }
 
 
@@ -18,10 +18,15 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
         <li><Link to='/about'>About</Link></li>
-        <li><Link to='/reviews'>Reviews</Link></li>
-       {user?.uid ? 
-       <li><button onClick={handleLogOut}>Sign Out</button></li>
-       :<li><Link to='/login'>Login</Link></li>}
+
+        {user?.uid ?
+            <>
+                <li><Link to='/dashboard'>Dashboared</Link></li>
+                <li><button onClick={handleLogOut}>Sign Out</button></li>
+
+
+            </>
+            : <li><Link to='/login'>Login</Link></li>}
     </React.Fragment>
 
 
@@ -38,7 +43,7 @@ const Navbar = () => {
                 </div>
                 <div className="avatar">
                     <div className="w-16 mask mask-hexagon">
-                        <Link to='/'><img src={logo} alt=''/></Link>
+                        <Link to='/'><img src={logo} alt='' /></Link>
                     </div>
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl">Mobile!mela</Link>
@@ -48,6 +53,9 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
+            <label htmlFor="dashboaed-drawer"  tabIndex={1} className="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
 
         </div>
     );

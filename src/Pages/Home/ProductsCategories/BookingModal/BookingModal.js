@@ -16,11 +16,12 @@ const BookingModal = ({ modalProduct , setModalProduct}) => {
         const price = form.price.value;
 
         const booking = {
+            productName,
             email,
             Phone: number,
             meetingAddress: meeting,
             price,
-            name
+            buyer: name
         }
        fetch('http://localhost:5000/bookings', {
         method: 'POST' ,

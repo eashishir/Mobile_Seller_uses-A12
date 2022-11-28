@@ -1,4 +1,4 @@
-import { data } from 'autoprefixer';
+
 import toast from 'react-hot-toast';
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
@@ -35,7 +35,7 @@ const SignUp = () => {
             }
             updateUser(userInfo)
             .then(() => {
-                navigate('/');
+               saveUser(data.name, data.email, data.account);
             })
             .catch(err => console.log(err))
         })
@@ -57,6 +57,27 @@ const SignUp = () => {
         .catch(error => console.error(error))
 
     };
+
+
+   const saveUser = (name, email, account) => {
+    const user = {name , email , account};
+    fetch('http://localhost:5000/users', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+        
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log('save user', data);
+        navigate('/');
+    })
+     
+
+   }
+
     return (
         <div className='h-[800px] flex justify-center items-center '>
             <div className='w-97 p-7 bg-error rounded'>
