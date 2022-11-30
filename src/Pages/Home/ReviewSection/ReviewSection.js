@@ -5,7 +5,7 @@ const ReviewSection = () => {
     return (
          
         <div>
-            <h2  className=' text-2xl text-center text-green-600 font-bold'>Our page review states</h2>
+            <h2  className=' text-3xl text-center text-secondary font-bold'>Our page review states</h2>
             <div className="flex justify-content-center m-2">
 
                 <div className="stat">
