@@ -6,7 +6,7 @@ const ReviewSection = () => {
          
         <div>
             <h2  className=' text-3xl text-center text-secondary font-bold'>Our page review states</h2>
-            <div className="flex justify-content-center m-2">
+            <div className="">
 
                 <div className="stat">
                     <div className="stat-figure text-primary">
