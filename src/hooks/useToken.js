@@ -21,19 +21,3 @@ export default useToken;
 
 
 
-// useEffect(() => {
-//     if(email){
-//       fetch(`https://my-assignment12-server.vercel.app/jwt?email=${email}`)
-//       .then(res => res.json())
-//       .then(data => {
-//           if (data.accessToken) {
-//               localStorage.setItem('accessToken', data.accessToken);
-//               setToken(data.accessToken);
-
-
-
-//           }
-//       });
-//     }
-//   }, [email]);
-//   return [token];
