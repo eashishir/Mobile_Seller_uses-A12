@@ -42,7 +42,7 @@ import SellerRoute from "../SellerRoute/SellerRoute";
             },
             {
                 path: '/products/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${ params.id }`),
+                loader: ({ params }) => fetch(`https://my-assignment12-server.vercel.app/products/${ params.id }`),
                 element:<PrivateRoute><AllProducts></AllProducts></PrivateRoute> ,
             }
         ]
@@ -70,7 +70,7 @@ import SellerRoute from "../SellerRoute/SellerRoute";
         {
             path:'/dashboard/payment/:id',
             element:<AdminRoute><Payment></Payment></AdminRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+            loader:({params}) => fetch(`https://my-assignment12-server.vercel.app/bookings/${params.id}`)
         },
        ]
     },

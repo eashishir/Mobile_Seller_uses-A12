@@ -46,7 +46,7 @@ const Login = () => {
     }
 
     const getUserToken = email => {
-        fetch(`http://localhost:5000/jwt?email=${email}`)
+        fetch(`https://my-assignment12-server.vercel.app/jwt?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 if (data.accessToken) {

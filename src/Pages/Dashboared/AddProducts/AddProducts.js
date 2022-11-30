@@ -36,7 +36,7 @@ const AddProducts = () => {
             image: imgData.data.url
         }
         // save information to the database 
-        fetch('http://localhost:5000/addProducts', {
+        fetch('https://my-assignment12-server.vercel.app/addProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

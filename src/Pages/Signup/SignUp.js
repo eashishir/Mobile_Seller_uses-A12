@@ -71,7 +71,7 @@ const SignUp = () => {
 
     const saveUser = (name, email, account) => {
         const user = { name, email, account };
-        fetch('http://localhost:5000/users', {
+        fetch('https://my-assignment12-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -90,7 +90,7 @@ const SignUp = () => {
     }
 
     const getUserToken = email => {
-        fetch(`http://localhost:5000/jwt?email=${email}`)
+        fetch(`https://my-assignment12-server.vercel.app/jwt?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 if (data.accessToken) {
