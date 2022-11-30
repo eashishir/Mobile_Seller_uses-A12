@@ -21,7 +21,7 @@ const ProductsCategories = () => {
     return (
         <section className='my-16'>
             <div>
-                <h2 className='text-center text-dark font-bold text-2xl'>Our Products <small className='text-2xl text-green-600'>Categories</small></h2>
+                <h2 className='text-center text-dark font-bold mb-5 text-3xl'>Our Products <small className='text-3xl text-green-600'>Categorie</small></h2>
 
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-3 '>
                     {
