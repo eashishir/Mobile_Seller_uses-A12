@@ -3,12 +3,21 @@ import DashboaredLayout from "../../Layout/DashboaredLayout";
 import Main from "../../Layout/Main/Main";
 import AllProducts from "../../Pages/AllProducts/AllProducts";
 import Blogs from "../../Pages/Blogs/Blogs";
+import AddProducts from "../../Pages/Dashboared/AddProducts/AddProducts";
+import AllUser from "../../Pages/Dashboared/AllUser/AllUser";
+import ManageProducts from "../../Pages/Dashboared/ManageProducts/ManageProducts";
 
 import MyOrders from "../../Pages/Dashboared/MyOrders/MyOrders";
+import Payment from "../../Pages/Dashboared/Payment/Payment";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import PageError from "../../Pages/PageError/PageError";
+
 import SignUp from "../../Pages/Signup/SignUp";
+import AdminRoute from "../AdminRoute/AdminRoute";
+
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import SellerRoute from "../SellerRoute/SellerRoute";
 
  const router = createBrowserRouter([
     {
@@ -45,9 +54,28 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
         {
             path:'/dashboard',
             element:<MyOrders></MyOrders>
-        }
+        },
+        {
+            path:'/dashboard/allusers',
+            element:<AdminRoute><AllUser></AllUser></AdminRoute>
+        },
+        {
+            path:'/dashboard/addproducts',
+            element:<SellerRoute><AddProducts></AddProducts></SellerRoute>
+        },
+        {
+            path:'/dashboard/manageproducts',
+            element:<SellerRoute><ManageProducts></ManageProducts></SellerRoute>
+        },
+        {
+            path:'/dashboard/payment/:id',
+            element:<AdminRoute><Payment></Payment></AdminRoute>,
+            loader:({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+        },
        ]
-    }
+    },
+    { path: '*', element: <PageError></PageError>},
+
 ])
 
 export default router;

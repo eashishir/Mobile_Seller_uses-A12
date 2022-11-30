@@ -24,7 +24,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                navigate(from, {replace:true})
+                getUserToken(data.email)
+                
+                
             })
             .catch(error => {
                 console.log(error)
@@ -37,10 +39,23 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            navigate(from, {replace:true})
+            getUserToken(user.email)
            
         })
         .catch(error => console.error(error))
+    }
+
+    const getUserToken = email => {
+        fetch(`http://localhost:5000/jwt?email=${email}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.accessToken) {
+                    localStorage.setItem('accessToken', data.accessToken);
+                 navigate(from, {replace:true})
+
+         
+                }
+            });
     }
 
 

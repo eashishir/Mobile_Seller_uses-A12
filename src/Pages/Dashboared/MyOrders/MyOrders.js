@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const MyOrders = () => {
@@ -10,7 +11,11 @@ const MyOrders = () => {
     const { data: bookings = [] } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
-            const res = await fetch(url);
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             const data = await res.json();
             return data;
         }
@@ -29,6 +34,8 @@ const MyOrders = () => {
                             <th>Phone</th>
                             <th>Price</th>
                             <th>Address</th>
+                            <th>Pay</th>
+
 
 
                         </tr>
@@ -36,7 +43,7 @@ const MyOrders = () => {
                     <tbody>
 
                         {
-                            bookings.map((book, i) => <tr key={book._id} className="hover">
+                            bookings?.map((book, i) => <tr key={book._id} className="hover">
                                 <th>{i+1}</th>
                                 <td>{book.productName}</td>
                                 <td>{book.buyer}</td>
@@ -44,6 +51,19 @@ const MyOrders = () => {
                                 <td>{book.Phone}</td>
                                 <td>${book.price}</td>
                                 <td>{book.meetingAddress}</td>
+                                <td>{
+                                    book.price && !book.paid  &&<Link
+                                     to={`/dashboard/payment/${book._id}`}>
+                                        <button className='btn btn-xs btn-primary'>Pay</button>
+                                        </Link>
+                                    
+                                    }
+                                    {
+                                        book.price && book.paid && <button className='btn btn-xs btn-success'>Paid</button>
+                                    }
+                                    
+                                    
+                                    </td>
                             </tr>)
                         }
 

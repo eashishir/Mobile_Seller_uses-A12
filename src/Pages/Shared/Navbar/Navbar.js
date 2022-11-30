@@ -46,7 +46,7 @@ const Navbar = () => {
                         <Link to='/'><img src={logo} alt='' /></Link>
                     </div>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">Mobile!mela</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl text-primary">Mobile<strong>mela</strong></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
