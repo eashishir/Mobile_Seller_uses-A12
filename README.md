@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+➼Website name:
+" Mobilemela  "
+➼live website link:
+`Hosting URL: https://my-assignment12-c132e.web.app/`
+➼Live server link:
+` https://my-assignment-11-server-olive.vercel.app`
+➼About Website :
+## Eftekhar it;s me , i am a product/object photographer based in dhaka, bangladesh. my photography is clean-cut and top-of-the-line quality, as apparent from my minimal photography portfolio website.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ➼Inspired BY clients,they say that:
+ The professional photographer showcases his best photos with plenty of negative space on the homepage. You can find more about each photography project by clicking on the associated photo: He mentions his roles in the project, what he did to successfully complete the project, about the client, and more for each photo. It’s a lot of (well-written) text, but it follows the “show and then tell” principle I discussed in the intro.
 
-## Available Scripts
+## Besides showcasing his work on the homepage, he has a separate Work page where he has displayed more of his works beautifully in a two-column layout.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+➼Is it helpful for everyone?:
+## Photography is important because it allows people to see the world from different perspectives. Thanks to photography, you can admire the most diverse scenarios and situations captured in a frozen moment. Photography is so powerful that it enables you to bring meaningful experiences to others in the form of static images. It allows the diffusion of information about things as they are.
